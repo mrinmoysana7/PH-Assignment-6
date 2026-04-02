@@ -10,7 +10,7 @@ function App() {
      <Navbar></Navbar>
      <Banner></Banner>
      <Stats></Stats>
-      <h1 className="text-6xl font-bold">Get started</h1>
+     
     </>
   );
 }

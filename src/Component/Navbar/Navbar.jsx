@@ -16,10 +16,10 @@ const Navbar = () => {
             className="lg:hidden"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X size={26} /> : <Menu size={26} />}
+            {isOpen ? <X className="md:hidden"/> : <Menu className="md:hidden"/>}
           </button>
 
-          <h1 className="text-2xl md:text-3xl font-extrabold text-indigo-600">
+          <h1 className="text-2xl md:text-3xl font-extrabold bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">
             DigiTools
           </h1>
         </div>
@@ -39,7 +39,7 @@ const Navbar = () => {
         <div className="flex items-center gap-4">
           <ShoppingCart />
 
-          <button className="hidden sm:block px-5 py-2 rounded-full text-white bg-gradient-to-r from-[#4F39F6] to-[#9514FA]">
+          <button className="hidden btn btn-ghost sm:block px-5 py-2 rounded-full text-white bg-linear-to-r from-[#4F39F6] to-[#9514FA]">
             Get Started
           </button>
         </div>
@@ -47,14 +47,14 @@ const Navbar = () => {
 
       {/* MOBILE DROPDOWN MENU */}
       {isOpen && (
-        <div className="lg:hidden bg-white shadow-md px-6 py-4 space-y-4">
+        <div className="md:hidden bg-white shadow-md px-6 py-4 space-y-4">
           <p className="cursor-pointer">Products</p>
           <p className="cursor-pointer">Features</p>
           <p className="cursor-pointer">Pricing</p>
           <p className="cursor-pointer">Testimonials</p>
           <p className="cursor-pointer">FAQ</p>
 
-          <button className="w-full mt-2 px-5 py-2 rounded-full text-white bg-linear-to-r from-[#4F39F6] to-[#9514FA]">
+          <button className="w-full btn btn-ghost mt-2 px-5 py-2 rounded-full text-white bg-linear-to-r from-[#4F39F6] to-[#9514FA]">
             Get Started
           </button>
         </div>

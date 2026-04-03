@@ -1,15 +1,35 @@
+import { Suspense, useState } from "react";
 import "./App.css";
 import Banner from "./Component/Banner/Banner";
 import Navbar from "./Component/Navbar/Navbar";
 import Stats from "./Component/Stats/Stats";
+import Products from "./Component/PremiumTools/Products/Products";
+import Footer from "./Component/Footer/Footer";
+
+
+const fetchProduct = async () => {
+  const res = await fetch(`${window.location.origin}/premiumTools.json`);
+  return res.json();
+}
 
 function App() {
+    const [number, setNumber] = useState(0);
+  const [productPromise] = useState(() => fetchProduct());
+
   return (
     <>
      
-     <Navbar></Navbar>
+     <Navbar number={number} ></Navbar>
      <Banner></Banner>
      <Stats></Stats>
+
+     
+     <Suspense fallback={<span className="loading loading-ball loading-xl"></span>}>
+      <Products productPromise={productPromise} number={number} setNumber={setNumber}></Products>
+     </Suspense>
+     
+
+     <Footer></Footer>
      
     </>
   );

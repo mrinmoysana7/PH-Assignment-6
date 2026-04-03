@@ -11,7 +11,7 @@
       "Grammar checker"
     ],
     "buttonText": "Buy Now",
-    "image": "/images/ai-writing-pro.png"
+    "image": "../src/assets/products/writing_2327400 1.png"
   },
   {
     "title": "Design Templates Pack",
@@ -25,7 +25,7 @@
       "Commercial license"
     ],
     "buttonText": "Buy Now",
-    "image": "/images/design-templates.png"
+    "image": "../src/assets/products/design-tool.png"
   },
   {
     "title": "Premium Stock Assets",
@@ -39,7 +39,7 @@
       "No attribution"
     ],
     "buttonText": "Buy Now",
-    "image": "/images/stock-assets.png"
+    "image": "../src/assets/products/camera_8775444 1.png"
   },
   {
     "title": "Automation Toolkit",
@@ -53,7 +53,7 @@
       "Custom workflows"
     ],
     "buttonText": "Buy Now",
-    "image": "/images/automation-toolkit.png"
+    "image": "../src/assets/products/operation.png"
   },
   {
     "title": "Resume Builder Pro",
@@ -67,7 +67,7 @@
       "Export to PDF"
     ],
     "buttonText": "Buy Now",
-    "image": "/images/resume-builder.png"
+    "image": "../src/assets/products/portfolio.png"
   },
   {
     "title": "Social Media Content Kit",
@@ -81,6 +81,6 @@
       "Analytics dashboard"
     ],
     "buttonText": "Buy Now",
-    "image": "/images/social-media-kit.png"
+    "image": "../src/assets/products/social-media.png"
   }
 ]

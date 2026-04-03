@@ -4,7 +4,7 @@ import buttonImage from "../../assets/Group 5 (1).png";
 
 const Banner = () => {
   return (
-    <div className="max-w-6xl mx-auto px-4 flex flex-col-reverse md:flex-row items-center gap-10 py-16">
+    <div className="container mx-auto px-4 flex flex-col-reverse md:flex-row items-center gap-10 py-16">
 
       {/* LEFT */}
       <div className="space-y-6 text-center md:text-left">
@@ -29,7 +29,7 @@ const Banner = () => {
             Explore Products
           </button>
 
-          <button className="flex btn btn-ghost items-center gap-2 px-6 py-3 border border-indigo-500 rounded-full">
+          <button className="flex btn btn-ghost items-center gap-2 px-6 py-3 border-2 border-indigo-500 rounded-full">
             <Play className="text-indigo-600" />
             <span className="bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent font-medium">
               Watch Demo

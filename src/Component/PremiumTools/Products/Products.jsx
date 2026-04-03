@@ -1,4 +1,4 @@
-import { Suspense, use, useState } from "react";
+import { use, useState } from "react";
 import AvilableProduct from "../AvilableProduct/AvilableProduct";
 import SelectedCardProduct from "../SelectedCardProduct/SelectedCardProduct";
 
@@ -7,6 +7,7 @@ const Products = ({ productPromise, setNumber, number}) => {
   const products = use(productPromise);
   console.log(products);
   const [isSelectedType, setIsSelectedType] = useState("Products");
+  const [selectedProducts, setSelectedProducts] = useState([]);
 
   return (
     <div className="container mx-auto space-y-4 mt-30">
@@ -37,9 +38,19 @@ const Products = ({ productPromise, setNumber, number}) => {
       </div>
       {isSelectedType === "Products" 
       ?
-      <AvilableProduct number={number} setNumber={setNumber} products={products}></AvilableProduct> 
+      <AvilableProduct 
+      setSelectedProducts={setSelectedProducts} 
+      selectedProducts={selectedProducts} 
+      number={number} 
+      setNumber={setNumber}  
+      products={products}>
+      </AvilableProduct> 
       : 
-      <SelectedCardProduct></SelectedCardProduct>} 
+      <SelectedCardProduct 
+      selectedProducts={selectedProducts} 
+      setNumber={setNumber} 
+      number={number} 
+      setSelectedProducts={setSelectedProducts} ></SelectedCardProduct>} 
     </div>
   );
 };

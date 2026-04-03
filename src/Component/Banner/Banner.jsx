@@ -31,7 +31,7 @@ const Banner = () => {
 
           <button className="flex btn btn-ghost items-center gap-2 px-6 py-3 border-2 border-indigo-500 rounded-full">
             <Play className="text-indigo-600" />
-            <span className="bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent font-medium">
+            <span className=" font-medium">
               Watch Demo
             </span>
           </button>

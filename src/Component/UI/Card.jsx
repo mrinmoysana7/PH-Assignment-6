@@ -1,7 +1,7 @@
 import { Check } from "lucide-react";
 import { useState } from "react";
 
-const Card = ({ product, setNumber }) => {
+const Card = ({ product, setNumber, setSelectedProducts, selectedProducts }) => {
   const [selected, setSelected] = useState(false);
 
   const handleAddToCart = () => {
@@ -9,11 +9,12 @@ const Card = ({ product, setNumber }) => {
       setSelected(true);
       setNumber((prev) => prev + 1);
     }
+    setSelectedProducts([...selectedProducts, product]);
   };
 
   return (
-    <div className="flex flex-col px-5 ">
-      <div className="flex-1 card lg:mx-5 bg-base-100  shadow-lg">
+    <div className="flex -mx-4 flex-col px-5 ">
+      <div className="flex-1  card bg-base-100 hover:drop-shadow-[0_30px_30px_rgba(0,0,0,0.1)]  shadow-lg">
         <div className="card-body flex flex-col">
           <div className="flex-1">
             <div className="flex justify-between">
@@ -50,8 +51,12 @@ const Card = ({ product, setNumber }) => {
             </div>
             <div className="mt-6 ">
               <button
-                onClick={handleAddToCart}
-                className={`btn btn-primary btn-block rounded-full border-none w-full ${selected ? "bg-green-500" : "bg-linear-to-r from-[#4F39F6] to-[#9514FA]"}`}
+                onClick={() => handleAddToCart(product)}
+                className={`btn btn-primary btn-block rounded-full border-none w-full ${
+                    selected 
+                    ? "bg-green-500" 
+                    : "bg-linear-to-r from-[#4F39F6] to-[#9514FA]"
+                }`}
               >
                 {selected === true ? "Added To Cart" : "Buy Now"}
               </button>

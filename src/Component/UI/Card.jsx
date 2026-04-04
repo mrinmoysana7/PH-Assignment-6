@@ -13,12 +13,12 @@ const Card = ({ product, setNumber, setSelectedProducts, selectedProducts }) => 
   };
 
   return (
-    <div className="flex -mx-4 flex-col px-5 ">
+    <div className="flex -mx-4 flex-col px-5 h-105 ">
       <div className="flex-1  card bg-base-100 hover:drop-shadow-[0_30px_30px_rgba(0,0,0,0.1)]  shadow-lg">
         <div className="card-body flex flex-col">
           <div className="flex-1">
             <div className="flex justify-between">
-              <img src={product.image} alt="" />
+              <img src={product?.image} alt="" />
               <div className="bg-[#E1E7FF] items-center flex  rounded-full w-max">
                 <span className="badge badge-xs   badge-warning border-none bg-clip-text bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-transparent ">
                   {product.tag}

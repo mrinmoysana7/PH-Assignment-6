@@ -10,7 +10,7 @@ const Products = ({ productPromise, setNumber, number}) => {
   const [selectedProducts, setSelectedProducts] = useState([]);
 
   return (
-    <div className="container mx-auto space-y-4 mt-30">
+    <div className="container mx-auto space-y-4 py-30">
       <div className="text-center space-y-4">
         <h2 className="font-extrabold text-5xl text-[#001931]">
           Premium Digital Tools

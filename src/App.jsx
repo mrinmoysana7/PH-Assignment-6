@@ -5,6 +5,9 @@ import Navbar from "./Component/Navbar/Navbar";
 import Stats from "./Component/Stats/Stats";
 import Products from "./Component/PremiumTools/Products/Products";
 import Footer from "./Component/Footer/Footer";
+import GetStarted from "./Component/GetStarted/GetStarted";
+import PricingSection from "./Component/PricingSection/PricingSection";
+import TransformSection from "./Component/TransformSection/TransformSection";
 
 
 const fetchProduct = async () => {
@@ -27,6 +30,9 @@ function App() {
      <Suspense fallback={<span className="loading loading-ball loading-xl"></span>}>
       <Products productPromise={productPromise} number={number} setNumber={setNumber}></Products>
      </Suspense>
+     <GetStarted></GetStarted>
+     <PricingSection></PricingSection>
+     <TransformSection></TransformSection>
      
 
      <Footer></Footer>

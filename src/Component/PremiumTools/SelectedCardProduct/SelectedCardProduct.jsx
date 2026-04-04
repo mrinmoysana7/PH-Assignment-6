@@ -1,14 +1,24 @@
+import { toast } from "react-toastify";
+
 const SelectedCardProduct = ({ selectedProducts, setSelectedProducts, setNumber }) => {
 
    const handleDeleteItems = (product) => {
     const filteredProduct = selectedProducts.filter(selectedPlayer => selectedPlayer.title != product.title);
+    toast.success('Product removed from cart successfully!');
     setSelectedProducts(filteredProduct);
     setNumber(prev => prev - 1);
    }
 
    const resetAllCartProducts = () => {
+      if(selectedProducts.length === 0) {
+        toast.error('You already removed products from cart!');
+        return;
+      }
+
+      toast.success('All products removed from cart successfully!');
       setSelectedProducts([]);
       setNumber(0);
+      
    }
 
   return (

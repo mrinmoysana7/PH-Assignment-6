@@ -8,6 +8,7 @@ import Footer from "./Component/Footer/Footer";
 import GetStarted from "./Component/GetStarted/GetStarted";
 import PricingSection from "./Component/PricingSection/PricingSection";
 import TransformSection from "./Component/TransformSection/TransformSection";
+import { ToastContainer } from "react-toastify";
 
 
 const fetchProduct = async () => {
@@ -33,6 +34,7 @@ function App() {
      <GetStarted></GetStarted>
      <PricingSection></PricingSection>
      <TransformSection></TransformSection>
+     <ToastContainer />
      
 
      <Footer></Footer>

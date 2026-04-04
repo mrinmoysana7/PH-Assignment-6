@@ -52,8 +52,15 @@ const PricingSection = () => {
                 </button>
               </div>
             </div>
-            <div className="card-middle md:-mt-6 text-white bg-linear-to-r from-[#4F39F6] to-[#9514FA] flex flex-col h-112 md:h-125 hover:shadow-xl p-6 rounded-2xl px-6 border shadow-lg border-gray-200">
+            <div className="card-middle relative md:-mt-1 lg:-mt-6 text-white bg-linear-to-r from-[#4F39F6] to-[#9514FA] flex flex-col h-112 md:h-125 hover:shadow-xl p-6 rounded-2xl px-6 shadow-lg">
               <div className="flex-1 space-y-6">
+                <div className=" ">
+                  <div className="absolute left-[37%] md:left-[43%] xl:left-[36%] -top-3 flex justify-center items-center  rounded-full flex-row w-30 px-3 py-1.5 bg-[#FEF3C6]">
+                    <h2 className=" text-[#BB4D00] text-[14px] font-bold">
+                      Most Popular
+                    </h2>
+                  </div>
+                </div>
                 <div className="">
                   <h2 className="font-bold text-2xl">Pro</h2>
                   <p className="">Best for professionals</p>
@@ -94,9 +101,7 @@ const PricingSection = () => {
               <div>
                 <button className="btn bg-white btn-ghost rounded-full border-none w-full">
                   <div className="bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">
-                   <h2 className="font-bold text-[18px]">
-                     Start Pro Trial
-                   </h2>
+                    <h2 className="font-bold text-[18px]">Start Pro Trial</h2>
                   </div>
                 </button>
               </div>
@@ -142,9 +147,7 @@ const PricingSection = () => {
 
               <div>
                 <button className="btn btn-primarybtn-ghost rounded-full border-none w-full bg-linear-to-r from-[#4F39F6] to-[#9514FA]">
-                  <p className="text-white">
-                    Contact Sales
-                  </p>
+                  <p className="text-white">Contact Sales</p>
                 </button>
               </div>
             </div>

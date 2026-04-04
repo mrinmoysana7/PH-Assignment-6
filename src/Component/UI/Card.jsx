@@ -1,14 +1,21 @@
 import { Check } from "lucide-react";
-import { useState } from "react";
+// import { useState } from "react";
+import { toast } from "react-toastify";
 
 const Card = ({ product, setNumber, setSelectedProducts, selectedProducts }) => {
-  const [selected, setSelected] = useState(false);
+  // const [selected, setSelected] = useState(false);
+  const isAdded = selectedProducts.find(
+  (item) => item.title === product.title
+);
 
   const handleAddToCart = () => {
-    if (!selected) {
-      setSelected(true);
-      setNumber((prev) => prev + 1);
+    if (isAdded) {    
+      toast.error('This product is already added to cart!');
+      return;
     }
+
+    toast.success('Product added to cart successfully!');
+    setNumber((prev) => prev + 1);
     setSelectedProducts([...selectedProducts, product]);
   };
 
@@ -51,14 +58,15 @@ const Card = ({ product, setNumber, setSelectedProducts, selectedProducts }) => 
             </div>
             <div className="mt-6 ">
               <button
-                onClick={() => handleAddToCart(product)}
+                // onClick={() => handleAddToCart(product)}
+                onClick={handleAddToCart}
                 className={`btn btn-primary btn-block rounded-full border-none w-full ${
-                    selected 
+                    isAdded 
                     ? "bg-green-500" 
                     : "bg-linear-to-r from-[#4F39F6] to-[#9514FA]"
                 }`}
               >
-                {selected === true ? "Added To Cart" : "Buy Now"}
+                {isAdded ? "Added To Cart" : "Buy Now"}
               </button>
             </div>
           </div>
